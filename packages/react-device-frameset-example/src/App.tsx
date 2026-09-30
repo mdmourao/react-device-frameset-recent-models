@@ -29,5 +29,9 @@ export const App = () => (
         )}
       </DeviceEmulator>
     </main>
+    <footer className="app-footer">
+      iPhone, iPad and MacBook are trademarks of Apple Inc. Other device names are trademarks of their respective owners.
+      This project is not affiliated with or endorsed by Apple or any other device maker.
+    </footer>
   </div>
 )

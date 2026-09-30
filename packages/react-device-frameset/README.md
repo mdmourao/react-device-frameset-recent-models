@@ -127,3 +127,7 @@ export const App = () => {
     )
 }
 ```
+
+## Trademarks
+
+iPhone, iPad and MacBook are trademarks of Apple Inc. Galaxy is a trademark of Samsung Electronics, Nexus of Google LLC, Lumia of Microsoft Corporation and HTC One of HTC Corporation. Device names are used only to describe which device a frame depicts. This project is not affiliated with, sponsored by or endorsed by any of these companies, and the frames are original CSS drawings, not official artwork.
