@@ -1,7 +1,5 @@
 # React Device Frameset
 
-[![NPM](https://nodei.co/npm/react-device-frameset-recent-models.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-device-frameset-recent-models/)
-
 ![publish workflow](https://github.com/mdmourao/react-device-frameset-recent-models/actions/workflows/publish.yml/badge.svg)
 ![pages workflow](https://github.com/mdmourao/react-device-frameset-recent-models/actions/workflows/pages.yml/badge.svg)
 [![npm version](https://img.shields.io/npm/v/react-device-frameset-recent-models.svg)](https://www.npmjs.com/package/react-device-frameset-recent-models)
