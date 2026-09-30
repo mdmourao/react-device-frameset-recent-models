@@ -1,30 +1,40 @@
 {
   "name": "react-device-frameset-recent-models",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "author": "mdmourao (https://github.com/mdmourao)",
   "contributors": [
     "Zheeeng <hi@zheeeng.me>"
   ],
-  "description": "React device frameset component with recent models (iPhone 17, iPhone Duo). Fork of react-device-frameset.",
+  "description": "React components that wrap any content in pure-CSS device frames (iPhone 17, iPhone Duo foldable, iPhone X/8, iPad, MacBook, Android) with a device emulator, picker, zoom and landscape. TypeScript. Fork of react-device-frameset.",
   "keywords": [
-    "frameset",
-    "component",
-    "simulator",
-    "emulator",
-    "frame",
-    "device",
-    "phone",
-    "tablet",
-    "pc",
-    "mac",
-    "ios",
-    "android",
-    "frameset",
     "react",
-    "component",
-    "vite",
-    "typescript"
+    "react-component",
+    "device-frame",
+    "device-mockup",
+    "mockup",
+    "phone-mockup",
+    "iphone-mockup",
+    "phone-frame",
+    "device-emulator",
+    "emulator",
+    "simulator",
+    "responsive-preview",
+    "iphone",
+    "iphone-17",
+    "iphone-duo",
+    "foldable",
+    "ipad",
+    "macbook",
+    "android",
+    "css",
+    "devices.css",
+    "typescript",
+    "storybook"
   ],
+  "homepage": "https://mdmourao.github.io/react-device-frameset-recent-models/",
+  "bugs": {
+    "url": "https://github.com/mdmourao/react-device-frameset-recent-models/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mdmourao/react-device-frameset-recent-models.git",
@@ -47,7 +57,8 @@
     "./*": "./dist/*"
   },
   "files": [
-    "dist"
+    "dist",
+    "llms.txt"
   ],
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",

@@ -31,6 +31,9 @@ jobs:
       - name: SPA fallback
         run: cp packages/react-device-frameset-example/dist/index.html packages/react-device-frameset-example/dist/404.html
 
+      - name: Serve llms.txt for AI agents
+        run: cp packages/react-device-frameset/llms.txt packages/react-device-frameset-example/dist/llms.txt
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
