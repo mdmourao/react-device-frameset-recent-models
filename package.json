@@ -1,6 +1,10 @@
 {
-  "author": "Zheeeng <hi@zheeeng.me>",
+  "author": "mdmourao (https://github.com/mdmourao)",
+  "contributors": [
+    "Zheeeng <hi@zheeeng.me>"
+  ],
   "private": false,
+  "packageManager": "pnpm@8.15.9",
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
     "dev:lib": "pnpm --filter react-device-frameset-recent-models dev",
