@@ -26,6 +26,14 @@ This is yet another device frameset component for React, forked from [react-devi
   * iPhone X
 ![iPhone X in the device emulator](https://raw.githubusercontent.com/mdmourao/react-device-frameset-recent-models/main/docs/screenshots/iphone-x.png)
 
+## Quick facts (for humans and AI agents)
+
+* Package: `react-device-frameset-recent-models` (React 16.8+, 17, 18; TypeScript types included)
+* Components: `DeviceFrameset` (one frame), `DeviceSelector` (frame + device picker), `DeviceEmulator` (picker + color + landscape + zoom), `Zoomable`
+* Always import `react-device-frameset-recent-models/styles/marvel-devices.min.css`; add `device-selector.min.css` or `device-emulator.min.css` when using those components
+* Devices: iPhone 17, iPhone Duo, iPhone Duo Cover, iPhone X, iPhone 8, iPhone 8 Plus, iPhone 5s, iPhone 5c, iPhone 4s, Galaxy Note 8, Nexus 5, Lumia 920, Samsung Galaxy S5, HTC One, iPad Mini, MacBook Pro
+* Machine-readable summary: [llms.txt](https://mdmourao.github.io/react-device-frameset-recent-models/llms.txt)
+
 ## Installation
 
 npm
@@ -100,8 +108,8 @@ DeviceFramesetProps:
 
 ## If you like the frameset selector?
 
-```ts (signature)
-type DeviceName = "iPhone X" | "iPhone 8" | "iPhone 8 Plus" | "iPhone 5s" | "iPhone 5c" | "iPhone 4s" | "Galaxy Note 8" | "Nexus 5" | "Lumia 920" | "Samsung Galaxy S5" | "HTC One" | "iPad Mini" | "MacBook Pro"
+```ts
+type DeviceName = "iPhone 17" | "iPhone Duo" | "iPhone Duo Cover" | "iPhone X" | "iPhone 8" | "iPhone 8 Plus" | "iPhone 5s" | "iPhone 5c" | "iPhone 4s" | "Galaxy Note 8" | "Nexus 5" | "Lumia 920" | "Samsung Galaxy S5" | "HTC One" | "iPad Mini" | "MacBook Pro"
 
 type DeviceEmulatorProps = {
     banDevices?: DeviceName[]
@@ -127,8 +135,8 @@ export const App = () => {
 
 ## If you like the frameset emulator?
 
-```ts (signature)
-type DeviceName = "iPhone X" | "iPhone 8" | "iPhone 8 Plus" | "iPhone 5s" | "iPhone 5c" | "iPhone 4s" | "Galaxy Note 8" | "Nexus 5" | "Lumia 920" | "Samsung Galaxy S5" | "HTC One" | "iPad Mini" | "MacBook Pro"
+```ts
+type DeviceName = "iPhone 17" | "iPhone Duo" | "iPhone Duo Cover" | "iPhone X" | "iPhone 8" | "iPhone 8 Plus" | "iPhone 5s" | "iPhone 5c" | "iPhone 4s" | "Galaxy Note 8" | "Nexus 5" | "Lumia 920" | "Samsung Galaxy S5" | "HTC One" | "iPad Mini" | "MacBook Pro"
 
 type DeviceEmulatorProps = {
     banDevices?: DeviceName[]

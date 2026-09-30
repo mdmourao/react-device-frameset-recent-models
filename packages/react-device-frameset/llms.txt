@@ -1,0 +1,81 @@
+# react-device-frameset-recent-models
+
+> React components that wrap any content in pure-CSS device frames: iPhone 17, iPhone Duo (foldable, unfolded and cover screen), iPhone X/8/5s/5c/4s, Galaxy Note 8, Nexus 5, Lumia 920, Galaxy S5, HTC One, iPad Mini and MacBook Pro. Includes a device emulator with picker, color, landscape and zoom. TypeScript types included. Works with React 16.8, 17 and 18. MIT licensed. Fork of react-device-frameset with recent models.
+
+Use it for: phone/tablet/laptop mockups, responsive previews, app screenshots, landing pages, docs and Storybook stories that show a UI inside a device.
+
+## Install
+
+npm install react-device-frameset-recent-models
+pnpm add react-device-frameset-recent-models
+yarn add react-device-frameset-recent-models
+bun add react-device-frameset-recent-models
+
+## Stylesheets (required)
+
+- `react-device-frameset-recent-models/styles/marvel-devices.min.css` for every frame
+- `react-device-frameset-recent-models/styles/device-selector.min.css` when using DeviceSelector
+- `react-device-frameset-recent-models/styles/device-emulator.min.css` when using DeviceEmulator
+- Bundlers without conditional exports: use `react-device-frameset-recent-models/dist/styles/...`
+
+## Single frame
+
+```tsx
+import { DeviceFrameset } from 'react-device-frameset-recent-models'
+import 'react-device-frameset-recent-models/styles/marvel-devices.min.css'
+
+export const App = () => (
+  <DeviceFrameset device="iPhone 17" color="mist-blue" zoom={0.8}>
+    <iframe src="https://example.com" style={{ width: '100%', height: '100%', border: 0 }} />
+  </DeviceFrameset>
+)
+```
+
+DeviceFrameset props: `device` (required), `color` (required when the device has colors), `landscape?: boolean`, `width?: number`, `height?: number` (screen size in px, overrides the default), `zoom?: number`, plus normal div attributes.
+
+## Emulator (picker + color + landscape + zoom)
+
+```tsx
+import { DeviceFrameset, DeviceEmulator } from 'react-device-frameset-recent-models'
+import 'react-device-frameset-recent-models/styles/marvel-devices.min.css'
+import 'react-device-frameset-recent-models/styles/device-emulator.min.css'
+
+export const App = () => (
+  <DeviceEmulator banDevices={['MacBook Pro']}>
+    {props => <DeviceFrameset {...props}>content</DeviceFrameset>}
+  </DeviceEmulator>
+)
+```
+
+- DeviceEmulator props: `children: (props: DeviceFramesetProps) => ReactNode`, `banDevices?: DeviceName[]`, `value?: DeviceFramesetProps`, `onChange?: (config: DeviceFramesetProps) => void`
+- DeviceSelector props: same, but `value?: DeviceName` and `onChange?: (name: DeviceName) => void`; import `device-selector.min.css`
+- Zoomable: a div that automatically scales its children down to fit the available space (used by DeviceEmulator)
+
+## Devices
+
+| device (exact string) | default screen (px) | color values | landscape |
+|---|---|---|---|
+| iPhone 17 | 402x874 | black, white, mist-blue, sage, lavender | yes |
+| iPhone Duo | 890x626 | night-sky, star-white | yes |
+| iPhone Duo Cover | 466x678 | night-sky, star-white | yes |
+| iPhone X | 375x812 | none | yes |
+| iPhone 8 | 375x667 | black, silver, gold | yes |
+| iPhone 8 Plus | 414x736 | black, silver, gold | yes |
+| iPhone 5s | 320x568 | black, silver, gold | yes |
+| iPhone 5c | 320x568 | white, red, yellow, green, blue | yes |
+| iPhone 4s | 320x480 | black, silver | yes |
+| Galaxy Note 8 | 400x822 | none | yes |
+| Nexus 5 | 320x568 | none | yes |
+| Lumia 920 | 320x533 | black, white, yellow, red, blue | yes |
+| Samsung Galaxy S5 | 320x568 | white, black | yes |
+| HTC One | 320x568 | none | yes |
+| iPad Mini | 576x768 | black, silver | yes |
+| MacBook Pro | 960x600 | none | no |
+
+"iPhone Duo" is a speculative foldable design, not an official Apple product. Device names only describe which device a frame depicts; not affiliated with Apple, Samsung, Google, Microsoft or HTC.
+
+## Links
+
+- Live demo: https://mdmourao.github.io/react-device-frameset-recent-models/
+- npm: https://www.npmjs.com/package/react-device-frameset-recent-models
+- Source and README: https://github.com/mdmourao/react-device-frameset-recent-models
