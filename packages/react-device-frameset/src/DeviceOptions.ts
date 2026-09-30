@@ -15,6 +15,27 @@ export const defineDevice = <
 >(definition: Def) => definition
 
 export const DeviceOptions = {
+    ['iPhone 17']: defineDevice({
+        device: 'iphone-17',
+        colors: ['black', 'white', 'mist-blue', 'sage', 'lavender'] as const,
+        hasLandscape: true,
+		width: 402,
+		height: 874,
+    }),
+    ['iPhone Duo']: defineDevice({
+        device: 'iphone-duo',
+        colors: ['night-sky', 'star-white'] as const,
+        hasLandscape: true,
+		width: 890,
+		height: 626,
+    }),
+    ['iPhone Duo Cover']: defineDevice({
+        device: 'iphone-duo-cover',
+        colors: ['night-sky', 'star-white'] as const,
+        hasLandscape: true,
+		width: 466,
+		height: 678,
+    }),
     ['iPhone X']: defineDevice({
         device: 'iphone-x',
         colors: [] as const,

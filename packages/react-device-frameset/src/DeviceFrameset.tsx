@@ -59,9 +59,14 @@ export const DeviceFrameset = React.memo<DeviceFramesetProps>(
                     <div className="shadow shadow--bl"></div>
                 </div> : null}
                 <div className="inner-shadow"></div>
+                {device === 'iPhone Duo' || device === 'iPhone Duo Cover' ? <div className="hinge" /> : null}
+                {device === 'iPhone 17' ? <div className="camera-control" /> : null}
                 <div className="screen">
                     {children}
                 </div>
+                {device === 'iPhone 17' || device === 'iPhone Duo Cover' ? <div className="island" /> : null}
+                {device === 'iPhone Duo' ? <div className="crease" /> : null}
+                {device === 'iPhone Duo' ? <div className="udc" /> : null}
                 <div className="home"></div>
                 <div className="bottom-bar"></div>
             </div>
