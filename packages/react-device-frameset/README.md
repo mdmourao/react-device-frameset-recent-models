@@ -14,13 +14,17 @@ This is yet another device frameset component for React, forked from [react-devi
 
 * Powered by pure css device prototype showcase [Marvel Devices.css](http://marvelapp.github.io/devices.css/)
 * [![language](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg)](http://typescriptlang.org/) Type Safe and under maintainable
-* Sample for reference
+* Recent devices: iPhone 17, iPhone Duo (unfolded and cover screen), plus the classic iPhone, Android, iPad and MacBook frames
+* Device Emulator with device picker, zoom and landscape, [try it live](https://mdmourao.github.io/react-device-frameset-recent-models/)
 
-  * Device Selector
-![frameset-screenshot](https://user-images.githubusercontent.com/1303154/120062053-a58a6200-c092-11eb-9fec-fa0dd3609645.png)
+  * iPhone 17
+![iPhone 17 in the device emulator](https://raw.githubusercontent.com/mdmourao/react-device-frameset-recent-models/main/docs/screenshots/iphone-17.png)
 
-  * Device Emulator
-![frameset-screenshot](https://user-images.githubusercontent.com/1303154/132490604-f6d05da8-835d-437f-9b10-5ffec76e661f.png)
+  * iPhone Duo (unfolded)
+![iPhone Duo in the device emulator](https://raw.githubusercontent.com/mdmourao/react-device-frameset-recent-models/main/docs/screenshots/iphone-duo.png)
+
+  * iPhone X
+![iPhone X in the device emulator](https://raw.githubusercontent.com/mdmourao/react-device-frameset-recent-models/main/docs/screenshots/iphone-x.png)
 
 ## Installation
 
@@ -127,3 +131,7 @@ export const App = () => {
     )
 }
 ```
+
+## Trademarks
+
+iPhone, iPad and MacBook are trademarks of Apple Inc. Galaxy is a trademark of Samsung Electronics, Nexus of Google LLC, Lumia of Microsoft Corporation and HTC One of HTC Corporation. Device names are used only to describe which device a frame depicts. This project is not affiliated with, sponsored by or endorsed by any of these companies, and the frames are original CSS drawings, not official artwork.
