@@ -1,5 +1,8 @@
 {
-  "author": "Zheeeng <hi@zheeeng.me>",
+  "author": "mdmourao (https://github.com/mdmourao)",
+  "contributors": [
+    "Zheeeng <hi@zheeeng.me>"
+  ],
   "private": false,
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",

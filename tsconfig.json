@@ -2,7 +2,10 @@
   "compilerOptions": {
     "target": "ES6",
     "jsx": "react-jsx",
-    "lib": ["ES2015", "DOM"],
+    "lib": [
+      "ES2015",
+      "DOM"
+    ],
     "declaration": true,
     "moduleResolution": "Node",
     "esModuleInterop": true,
@@ -13,6 +16,12 @@
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
     "alwaysStrict": true,
-    "noErrorTruncation": true
+    "noErrorTruncation": true,
+    "baseUrl": ".",
+    "paths": {
+      "react-device-frameset-recent-models": [
+        "packages/react-device-frameset/src/index.ts"
+      ]
+    }
   }
 }
