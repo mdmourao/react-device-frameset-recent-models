@@ -18,7 +18,7 @@ export const App = () => (
       </nav>
     </header>
     <main className="app-main">
-      <DeviceEmulator banDevices={['HTC One']}>
+      <DeviceEmulator>
         {props => (
           <DeviceFrameset {...props}>
             <div className="demo-screen">

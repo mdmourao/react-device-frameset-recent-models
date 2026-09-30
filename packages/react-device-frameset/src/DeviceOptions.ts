@@ -107,7 +107,7 @@ export const DeviceOptions = {
 		height: 568,
     }),
     ['HTC One']: defineDevice({
-        device: 'nexus5',
+        device: 'htc-one',
         colors: [] as const,
         hasLandscape: true,
 		width: 320,
