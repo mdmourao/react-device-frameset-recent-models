@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+# Uses npm Trusted Publishing (OIDC), so no NPM_TOKEN secret is needed.
+# Configure it on npmjs.com: package Settings -> Trusted Publisher -> GitHub Actions,
+# user "mdmourao", repository "react-device-frameset-recent-models", workflow "publish.yml".
 permissions:
   contents: read
   id-token: write
@@ -21,11 +24,17 @@ jobs:
       - name: Build
         uses: ./.github/actions/build
 
+      - name: Update npm
+        run: npm install -g npm@latest
+
       # Publishes only when the version in package.json is not on npm yet
       - name: Publish
-        uses: JS-DevTools/npm-publish@v3
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          package: ./packages/react-device-frameset
-          access: public
-          provenance: true
+        working-directory: packages/react-device-frameset
+        run: |
+          NAME=$(node -p "require('./package.json').name")
+          VERSION=$(node -p "require('./package.json').version")
+          if npm view "$NAME@$VERSION" version >/dev/null 2>&1; then
+            echo "$NAME@$VERSION is already on npm, skipping"
+          else
+            npm publish --access public
+          fi
