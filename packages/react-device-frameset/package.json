@@ -1,8 +1,8 @@
 {
-  "name": "react-device-frameset",
-  "version": "1.3.4",
+  "name": "react-device-frameset-recent-models",
+  "version": "1.4.0",
   "author": "Zheeeng <hi@zheeeng.me>",
-  "description": "This is yet another device frameset component for React.",
+  "description": "React device frameset component with recent models (iPhone 17, iPhone Duo). Fork of react-device-frameset.",
   "keywords": [
     "frameset",
     "component",
@@ -22,7 +22,7 @@
     "vite",
     "typescript"
   ],
-  "repository": "zheeeng/react-device-frameset",
+  "repository": "mdmourao/react-device-frameset-recent-models",
   "license": "MIT",
   "sideEffects": [
     "dist/styles/*.css"

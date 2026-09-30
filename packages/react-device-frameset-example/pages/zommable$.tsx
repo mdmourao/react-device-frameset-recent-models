@@ -3,7 +3,7 @@
  * @order 3
  */
 
-import { Zoomable } from 'react-device-frameset'
+import { Zoomable } from 'react-device-frameset-recent-models'
 
 const Demo = () => (
   <div style={{ display: 'flex', flexShrink: 0, flexWrap: 'wrap' }}>

@@ -1,12 +1,12 @@
 # React Device Frameset
 
-[![NPM](https://nodei.co/npm/react-device-frameset.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-device-frameset/)
+[![NPM](https://nodei.co/npm/react-device-frameset-recent-models.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-device-frameset-recent-models/)
 
-![publish workflow](https://github.com/zheeeng/react-device-frameset/actions/workflows/publish.yml/badge.svg)
-![pages workflow](https://github.com/zheeeng/react-device-frameset/actions/workflows/pages.yml/badge.svg)
-[![npm version](https://img.shields.io/npm/v/react-device-frameset.svg)](https://www.npmjs.com/package/react-device-frameset)
+![publish workflow](https://github.com/mdmourao/react-device-frameset-recent-models/actions/workflows/publish.yml/badge.svg)
+![pages workflow](https://github.com/mdmourao/react-device-frameset-recent-models/actions/workflows/pages.yml/badge.svg)
+[![npm version](https://img.shields.io/npm/v/react-device-frameset-recent-models.svg)](https://www.npmjs.com/package/react-device-frameset-recent-models)
 
-This is yet another device frameset component for React.
+This is yet another device frameset component for React, forked from [react-device-frameset](https://github.com/zheeeng/react-device-frameset) with recent models (iPhone 17, iPhone Duo).
 
 ## [Demo](https://mdmourao.github.io/react-device-frameset-recent-models/)
 
@@ -25,22 +25,22 @@ This is yet another device frameset component for React.
 ## Installation
 
 ```bash
-yarn add react-device-frameset (or npm/pnpm)
+yarn add react-device-frameset-recent-models (or npm/pnpm)
 ```
 
 ## Usage
 
 ### Stylesheet importing
 
-`react-device-frameset` supports [conditional exports](https://nodejs.org/api/packages.html#conditional-exports).
+`react-device-frameset-recent-models` supports [conditional exports](https://nodejs.org/api/packages.html#conditional-exports).
 
-If the application bundler supports this feature and above node v12.11.0, you can import the stylesheet through the recommended path `react-device-frameset/styles`, it is largely supported in real developing environments, otherwise, you need to import it from `react-device-frameset/dist/styles`.
+If the application bundler supports this feature and above node v12.11.0, you can import the stylesheet through the recommended path `react-device-frameset-recent-models/styles`, it is largely supported in real developing environments, otherwise, you need to import it from `react-device-frameset-recent-models/dist/styles`.
 
 ### Basic Example
 
 ```tsx
-import { DeviceFrameset } from 'react-device-frameset'
-import 'react-device-frameset/styles/marvel-devices.min.css'
+import { DeviceFrameset } from 'react-device-frameset-recent-models'
+import 'react-device-frameset-recent-models/styles/marvel-devices.min.css'
 
 export const App = () => {
     return (
@@ -88,9 +88,9 @@ type DeviceEmulatorProps = {
 ```
 
 ```tsx
-import { DeviceFrameset, DeviceSelector } from 'react-device-frameset'
-import 'react-device-frameset/styles/marvel-devices.min.css'
-import 'react-device-frameset/styles/device-selector.min.css'
+import { DeviceFrameset, DeviceSelector } from 'react-device-frameset-recent-models'
+import 'react-device-frameset-recent-models/styles/marvel-devices.min.css'
+import 'react-device-frameset-recent-models/styles/device-selector.min.css'
 
 export const App = () => {
     return (
@@ -115,9 +115,9 @@ type DeviceEmulatorProps = {
 ```
 
 ```tsx
-import { DeviceFrameset, DeviceEmulator } from 'react-device-frameset'
-import 'react-device-frameset/styles/marvel-devices.min.css'
-import 'react-device-frameset/styles/device-emulator.min.css'
+import { DeviceFrameset, DeviceEmulator } from 'react-device-frameset-recent-models'
+import 'react-device-frameset-recent-models/styles/marvel-devices.min.css'
+import 'react-device-frameset-recent-models/styles/device-emulator.min.css'
 
 export const App = () => {
     return (
