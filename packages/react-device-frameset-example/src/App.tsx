@@ -1,6 +1,7 @@
 import { DeviceFrameset, DeviceEmulator } from 'react-device-frameset-recent-models'
 import 'react-device-frameset-recent-models/styles/marvel-devices.css'
 import 'react-device-frameset-recent-models/styles/device-emulator.css'
+import { InstallCommand } from './InstallCommand'
 
 const REPO_URL = 'https://github.com/mdmourao/react-device-frameset-recent-models'
 const NPM_URL = 'https://www.npmjs.com/package/react-device-frameset-recent-models'
@@ -12,6 +13,7 @@ export const App = () => (
         <h1>React Device Frameset</h1>
         <p>Pick a device to preview it. Includes iPhone 17 and iPhone Duo.</p>
       </div>
+      <InstallCommand />
       <nav>
         <a href={REPO_URL}>GitHub</a>
         <a href={NPM_URL}>npm</a>
