@@ -2693,4 +2693,436 @@
 			}
 		}
 	}
+
+	// Modern iPhones (iPhone 17, iPhone Duo): flat bezels, Dynamic Island, no home button
+	&.iphone-17, &.iphone-duo, &.iphone-duo-cover {
+		.inner, .overflow, .inner-shadow, .top-bar, .bottom-bar, .camera, .sensor, .speaker, .sensors, .more-sensors, .home {
+			display: none;
+		}
+
+		&:before {
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			width: calc(100% - 6px);
+			height: calc(100% - 6px);
+			content: '';
+			background: #050505;
+			z-index: 1;
+		}
+
+		.screen {
+			box-shadow: none;
+		}
+
+		.volume, .volume:before, .volume:after, .sleep, .camera-control {
+			position: absolute;
+			width: 3px;
+			background: inherit;
+			filter: brightness(0.85);
+		}
+
+		.volume:before, .volume:after {
+			content: '';
+			left: 0;
+			filter: none;
+		}
+
+		.island {
+			position: absolute;
+			left: 50%;
+			background: #000;
+			z-index: 4;
+		}
+	}
+
+	&.iphone-17 {
+		width: 402px;
+		height: 874px;
+		padding: 14px;
+		background: #3b3b3d;
+		border-radius: 68px;
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25), inset 0 0 6px 0 rgba(0, 0, 0, 0.35);
+
+		&:before {
+			border-radius: 65px;
+		}
+
+		.screen {
+			border-radius: 54px;
+		}
+
+		.island {
+			top: 25px;
+			width: 126px;
+			height: 37px;
+			margin-left: -63px;
+			border-radius: 19px;
+		}
+
+		// Action button, then volume up / down
+		.volume {
+			left: -3px;
+			top: 150px;
+			height: 30px;
+			border-radius: 2px 0 0 2px;
+
+			&:before {
+				top: 62px;
+				height: 58px;
+				border-radius: 2px 0 0 2px;
+			}
+
+			&:after {
+				top: 136px;
+				height: 58px;
+				border-radius: 2px 0 0 2px;
+			}
+		}
+
+		.sleep {
+			right: -3px;
+			top: 230px;
+			height: 96px;
+			border-radius: 0 2px 2px 0;
+		}
+
+		.camera-control {
+			right: -2px;
+			top: 560px;
+			width: 2px;
+			height: 66px;
+			background: #1a1a1a;
+			filter: none;
+			border-radius: 0 2px 2px 0;
+		}
+
+		&.black { background: #3b3b3d; }
+		&.white { background: #e4e4e2; }
+		&.mist-blue { background: #a7bccf; }
+		&.sage { background: #b3bca4; }
+		&.lavender { background: #cfc3e3; }
+
+		&.landscape {
+			width: 874px;
+			height: 402px;
+
+			.island {
+				top: 50%;
+				left: 25px;
+				width: 37px;
+				height: 126px;
+				margin-left: 0;
+				margin-top: -63px;
+			}
+
+			.volume, .volume:before, .volume:after, .sleep, .camera-control {
+				height: 3px;
+			}
+
+			.volume {
+				top: auto;
+				bottom: -3px;
+				left: 150px;
+				width: 30px;
+				border-radius: 0 0 2px 2px;
+
+				&:before {
+					top: 0;
+					left: 62px;
+					width: 58px;
+					border-radius: 0 0 2px 2px;
+				}
+
+				&:after {
+					top: 0;
+					left: 136px;
+					width: 58px;
+					border-radius: 0 0 2px 2px;
+				}
+			}
+
+			.sleep {
+				top: -3px;
+				right: auto;
+				left: 230px;
+				width: 96px;
+				border-radius: 2px 2px 0 0;
+			}
+
+			.camera-control {
+				top: -2px;
+				right: auto;
+				left: 560px;
+				width: 66px;
+				height: 2px;
+				border-radius: 2px 2px 0 0;
+			}
+		}
+	}
+
+	// iPhone Duo unfolded: book-style foldable, 7.6" inner display with an under-display camera
+	&.iphone-duo {
+		width: 890px;
+		height: 626px;
+		padding: 14px;
+		background: #242a38;
+		border-radius: 44px;
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25), inset 0 0 6px 0 rgba(0, 0, 0, 0.35);
+
+		&:before {
+			border-radius: 41px;
+		}
+
+		.screen {
+			border-radius: 30px;
+		}
+
+		// Hinge seam, visible on the frame between the two halves
+		.hinge {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 50%;
+			width: 12px;
+			margin-left: -6px;
+			background: rgba(0, 0, 0, 0.3);
+			z-index: 0;
+		}
+
+		.crease {
+			position: absolute;
+			top: 14px;
+			bottom: 14px;
+			left: 50%;
+			width: 12px;
+			margin-left: -6px;
+			background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.06) 40%, rgba(255, 255, 255, 0.12) 50%, rgba(0, 0, 0, 0.06) 60%, rgba(0, 0, 0, 0));
+			pointer-events: none;
+			z-index: 4;
+		}
+
+		.udc {
+			position: absolute;
+			top: 26px;
+			left: 75%;
+			width: 10px;
+			height: 10px;
+			margin-left: -5px;
+			border-radius: 50%;
+			background: rgba(0, 0, 0, 0.08);
+			pointer-events: none;
+			z-index: 4;
+		}
+
+		// Volume and the Touch ID side button sit on the top edge of the right half
+		.volume {
+			top: -3px;
+			left: 520px;
+			width: 56px;
+			height: 3px;
+			border-radius: 2px 2px 0 0;
+
+			&:before {
+				top: 0;
+				left: 66px;
+				width: 56px;
+				height: 3px;
+				border-radius: 2px 2px 0 0;
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+
+		.sleep {
+			top: -3px;
+			right: 60px;
+			width: 80px;
+			height: 3px;
+			border-radius: 2px 2px 0 0;
+		}
+
+		&.night-sky { background: #242a38; }
+		&.star-white { background: #ece8df; }
+
+		&.landscape {
+			width: 626px;
+			height: 890px;
+
+			.hinge {
+				top: 50%;
+				bottom: auto;
+				left: 0;
+				right: 0;
+				width: auto;
+				height: 12px;
+				margin-left: 0;
+				margin-top: -6px;
+			}
+
+			.crease {
+				top: 50%;
+				bottom: auto;
+				left: 14px;
+				right: 14px;
+				width: auto;
+				height: 12px;
+				margin-left: 0;
+				margin-top: -6px;
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.06) 40%, rgba(255, 255, 255, 0.12) 50%, rgba(0, 0, 0, 0.06) 60%, rgba(0, 0, 0, 0));
+			}
+
+			.udc {
+				top: 75%;
+				left: auto;
+				right: 26px;
+				margin-left: 0;
+				margin-top: -5px;
+			}
+
+			.volume, .volume:before, .sleep {
+				width: 3px;
+			}
+
+			.volume {
+				top: 520px;
+				left: auto;
+				right: -3px;
+				height: 56px;
+				border-radius: 0 2px 2px 0;
+
+				&:before {
+					top: 66px;
+					left: 0;
+					height: 56px;
+					border-radius: 0 2px 2px 0;
+				}
+			}
+
+			.sleep {
+				top: auto;
+				bottom: 60px;
+				right: -3px;
+				height: 80px;
+				border-radius: 0 2px 2px 0;
+			}
+		}
+	}
+
+	// iPhone Duo folded: 5.4" outer display, hinge spine on the left edge
+	&.iphone-duo-cover {
+		width: 466px;
+		height: 678px;
+		padding: 12px;
+		background: #242a38;
+		border-radius: 52px;
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25), inset 0 0 6px 0 rgba(0, 0, 0, 0.35);
+
+		&:before {
+			border-radius: 49px;
+		}
+
+		.screen {
+			border-radius: 40px;
+		}
+
+		.hinge {
+			position: absolute;
+			top: 24px;
+			bottom: 24px;
+			left: -5px;
+			width: 10px;
+			border-radius: 5px;
+			background: inherit;
+			filter: brightness(0.75);
+			z-index: 0;
+		}
+
+		.island {
+			top: 22px;
+			width: 110px;
+			height: 32px;
+			margin-left: -55px;
+			border-radius: 16px;
+		}
+
+		.volume {
+			right: -3px;
+			top: 110px;
+			height: 52px;
+			border-radius: 0 2px 2px 0;
+
+			&:before {
+				top: 64px;
+				height: 52px;
+				border-radius: 0 2px 2px 0;
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+
+		.sleep {
+			right: -3px;
+			top: 250px;
+			height: 80px;
+			border-radius: 0 2px 2px 0;
+		}
+
+		&.night-sky { background: #242a38; }
+		&.star-white { background: #ece8df; }
+
+		&.landscape {
+			width: 678px;
+			height: 466px;
+
+			.hinge {
+				top: auto;
+				bottom: -5px;
+				left: 24px;
+				right: 24px;
+				width: auto;
+				height: 10px;
+			}
+
+			.island {
+				top: 50%;
+				left: 22px;
+				width: 32px;
+				height: 110px;
+				margin-left: 0;
+				margin-top: -55px;
+			}
+
+			.volume, .volume:before, .sleep {
+				height: 3px;
+			}
+
+			.volume {
+				top: -3px;
+				right: auto;
+				left: 110px;
+				width: 52px;
+				border-radius: 2px 2px 0 0;
+
+				&:before {
+					top: 0;
+					left: 64px;
+					width: 52px;
+					border-radius: 2px 2px 0 0;
+				}
+			}
+
+			.sleep {
+				top: -3px;
+				right: auto;
+				left: 250px;
+				width: 80px;
+				border-radius: 2px 2px 0 0;
+			}
+		}
+	}
 }

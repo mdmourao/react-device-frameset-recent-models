@@ -5,6 +5,7 @@ import pages from 'vite-plugin-react-pages'
 import virtualPlainText from 'vite-plugin-virtual-plain-text'
 
 export default defineConfig({
+  base: process.env.BASE_PATH || '/',
   plugins: [
     react(),
     pages({

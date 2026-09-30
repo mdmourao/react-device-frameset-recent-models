@@ -8,7 +8,7 @@
 
 This is yet another device frameset component for React.
 
-## [Demo](https://react-device-frameset.zheeeng.me)
+## [Demo](https://mdmourao.github.io/react-device-frameset-recent-models/)
 
 ## Features
 
@@ -56,6 +56,9 @@ export const App = () => {
 DeviceFramesetProps:
 
 ```ts (signature)
+| { device: 'iPhone 17', color: 'black' | 'white' | 'mist-blue' | 'sage' | 'lavender', landscape?: boolean, width?: number, height?: number, zoom?: number }
+| { device: 'iPhone Duo', color: 'night-sky' | 'star-white', landscape?: boolean, width?: number, height?: number, zoom?: number }
+| { device: 'iPhone Duo Cover', color: 'night-sky' | 'star-white', landscape?: boolean, width?: number, height?: number, zoom?: number }
 | { device: 'iPhone X', landscape?: boolean, width?: number, height?: number, zoom?: number }
 | { device: 'iPhone 8', color: 'black' | 'silver' | 'gold', landscape?: boolean, width?: number, height?: number, zoom?: number }
 | { device: 'iPhone 8 Plus', color: 'black' | 'silver' | 'gold', landscape?: boolean, width?: number, height?: number, zoom?: number }
