@@ -28,8 +28,28 @@ This is yet another device frameset component for React, forked from [react-devi
 
 ## Installation
 
+npm
+
 ```bash
-yarn add react-device-frameset-recent-models (or npm/pnpm)
+npm install react-device-frameset-recent-models
+```
+
+pnpm
+
+```bash
+pnpm add react-device-frameset-recent-models
+```
+
+yarn
+
+```bash
+yarn add react-device-frameset-recent-models
+```
+
+bun
+
+```bash
+bun add react-device-frameset-recent-models
 ```
 
 ## Usage
